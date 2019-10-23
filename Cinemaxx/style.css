@@ -20,3 +20,25 @@ i   {
 .cp {
     color: white;
 }
+
+.poster1{
+    width: 70%;
+}
+
+h5{
+    font-weight: 500;
+    font-family: inherit;
+    margin-top: 9px;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    scroll-margin-inline-end: 0px;
+}
+
+.checked{
+    color: orange;
+}
