@@ -12,3 +12,13 @@
       });
 
 })(jQuery);
+
+function openContent(obj, idContentContainer){
+  var i, x, tablinks;
+
+  x = document.getElementsByClassName("tabs");
+  for(i=0; i<x.length; i++){
+      x[i].style.display = "none";
+  }
+  document.getElementById(idContentContainer).style.display ="block";
+  }
