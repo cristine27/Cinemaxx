@@ -9,7 +9,7 @@
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -141,13 +141,18 @@
         <!-- nav tabs -->    
         <section class="py-5">
             <div class="container">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" data-toogle="tab" href="#nowplaying">NOW SHOWING</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toogle="tab" href="#comingsoon">COMING SOON</a></li>
+                <ul class="nav nav-tabs" role="tablist" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nowplaying-tab" role="tab" data-toogle="tab" aria-selected="true" aria-controls="nowplaying" href="#nowplaying">NOW SHOWING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id ="comingsoon-tab" data-toogle="tab" role="tab" aria-controls="comingsoon" aria-selected="false" href="#comingsoon">COMING SOON</a>
+                    </li>
                 </ul>
 
-                <div class="tab-content">
-                    <div id="nowplaying" class="container tab-pane active">
+                <div class="tab-content" id="myTabContent">
+                    <!-- now playing -->
+                    <div id="nowplaying" class="container tab-pane active" role="tabpanel" aria-labelledby="nowplaying-tab">
                         <br>
                         <div class="row">
                             <div class="col">
@@ -208,6 +213,47 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- coming soon -->
+                    <div id="comingsoon" class="tab-pane container fade" role="tabpanel" aria-labelledby="comingsoon-tab"><br>
+                        <div class="row">
+                            <div class="col">
+                                <img class="poster1" src="img/poster4.jpg">
+                                <div id="caption">
+                                    <h5>Frozen 2</h5>
+                                    <p>2h 0min</p>
+                                    <p>November 2019</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <img class="poster1" src="img/poster6.jpg">
+                                <div id="caption">
+                                    <h5>Charlie's Angels</h5>
+                                    <p>1h 59min</p>
+                                    <p>30 October 2019</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <img class="poster1" src="img/poster7.jpg">
+                                <div id="caption">
+                                    <h5>Terminator: Dark Fate</h5>
+                                    <p>2h 14min</p>
+                                    <p>26 October 2019</p>
+                                </div> 
+                            </div>
+
+                            <div class="col">
+                                <img class="poster1" src="img/poster8.jpg">
+                                <div id="caption">
+                                    <h5>Last Christmas</h5>
+                                    <p>1h 45min</p>
+                                    <p>7 November 2019</p>
+                                </div> 
                             </div>
                         </div>
                     </div>
