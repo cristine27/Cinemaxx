@@ -37,8 +37,12 @@
                         <a class="nav-link tablink" onclick="openContent(this,'ticket')" href="#">Ticket</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link tablink" onclick="openContent(this,'about')" href="#">About</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link tablink dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span>About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="openContent(this,'aboutIndo')">About-indonesia</a></li>
+                            <li><a href="#" onclick="openContent(this,'aboutEng')">About-english</a></li>
+                        </ul>
                     </li>
                     
                     <!-- Login & Modal for Login -->
@@ -270,8 +274,112 @@
 <!-- end of ticket section -->
 
 <!-- about section -->
-    <div id="about" class="about tabs w3-container" style="display: none;">
-        <p>ini section about</p>
+    <div id="aboutIndo" class="about tabs w3-container" style="display: none;">
+        <div class="w3-container">
+            <h2 style="text-align: center; color: black; border-bottom: 1px solid black;">TENTANG KAMI</h2>
+            <p style="text-align: justify;">
+                Cinemaxx, jaringan bioskop yang di resmikan tahun 2014 oleh lippo Group, dipersiapkan untuk menjadi
+                salah satu pemutar film terbesar dan paling dipilih penonton Indonesia-dengan lebih dari 2.000 layar dan
+                300 lokasi yang direncanakan tersebar di 85 kota dalam 10 tahun ke depan.
+                <br>
+                <br>
+                Dengan berbagai fasilitas untuk menciptakan Integrated Cinematic Maxxperience, Cinemaxx Menawarkan :
+            </p>
+
+            <ol>
+                <li><b>Cinemaxx Junior</b>
+                    <p>
+                        Bioskop pertama di indonesia yang dirancang sepenuhnya untuk anak-anak, dengan
+                        menggabungkan dua hal yang disukai anak-anak - menonton film dan bermain. Ruang sinema di Cinemaxx
+                        Junior mempunyai area bermain dengan berbagai permainan seperti play bridge, flying fox, giant trampoline,
+                        ball pit, climbing trees, mini hammocks, dan banyak lagi. Anak-anak dan keluarga dapat menikmati film
+                        dengan berbagai pilihan tipe tempat duduk, seperti bean bag, lounger, cinema seat, atau sofa bed untuk berdua.<br>
+                    </p>
+                </li>
+
+                <li><b>Ultra XD</b>
+                    <p>
+                        Pengalaman menonton film yang benar-benar nyata dan mendalam, dengan layar raksasa
+                        yang terbentang memenuhi ruangan dari sisi ke sisi, dari lantai hingga langit-langit, dengan kekuatan proyektor
+                        dual digital resolusi tinggi, kedahsyatan suara Dolby Atmos multi-dimensional dari segala arah, 3D yang
+                        paling terang dan kenyamanan tempat duduk yang disesuaikan dengan geometri teater untuk wilayah<br>
+                        pandang terbaik.<br>
+                    </p>
+                </li>
+
+                <li><b>Cinemaxx Gold</b>
+                    <p>
+                        Persembahan kelas VIP dari Cinemaxx, dengan kemewahan kursi recliner dan kelezatan
+                        makanan dan minuman berkelas yang disajikan oleh petugas yang selalu siap melayani kapan saja.
+                    </p>
+                </li>
+
+                <li><b>Cinemaxx Regular</b>
+                    <p>
+                        Pengalaman audio-visual mutakhir dengan sistem proyeksi terkini dan kekuatan
+                        audio digital yang begitu nyata, dengan wilayah pandang terbaik dari setiap kursi.<br>
+                    </p>
+                </li>
+            </ol>
+
+            <p>Untuk informasi lebih lanjut tentang Cinemaxx, silahkan hubungi <a href="#">feedback@cinemaxxtheater.com</a></p>
+            <p>Untuk info Media, silahkan kunjungi <a href="#">Press Room</a> atau mengirimkan email ke <a href="#">media@cinemaxxtheater.com</a></p>
+            <p>Untuk info pemasangan iklan, silahkan mengirimkan email ke <a href="#">sales@cinemaxxtheater.com</a></p>
+            <p>Untuk pengajuan kerjasama, silahkan mengirimkan email ke <a href="#">marketing@cinemaxxtheater.com</a></p>
+            <p>Untuk terhubung dengan kami, silahkan ikuti Twitter @cinemaxxtheater dan klik Like di Facebook Cinemaxx Theater</p>
+        </div>
+    </div>
+
+    <div id="aboutEng" class="about tabs w3-container" style="display: none;"> 
+        <div class="w3-container">
+                <h2 style="text-align: justify; color: black; border-bottom: 1px solid black;">ABOUT CINEMAXX</h2>
+                <p style="text-align: justify;">
+                        Cinemaxx, a cinema chain launched in 2014 by Lippo Group, is poised to be Indonesia's largest and most preferred film exhibitor-- with plans to build over 2,000 screens and 300 locations across 85 cities in the next 10 years
+                    <br>
+                    <br>
+                    In its bouquet of Integrated Cinematic Maxxperiences, Cinemaxx offers :
+                </p>
+    
+                <ol>
+                    <li><b>Cinemaxx Junior</b>
+                        <p>
+                                the very first cinema in Indonesia that is designed completely for children, combining 
+                                two things that kids love – movies and play. The cinema hall in Cinemaxx Junior will include
+                                a mini playground with activities such as play bridge, flying fox, giant trampoline, ball pit,
+                                climbing trees, mini hammocks, and much more. Families can enjoy films from a variety of seating
+                                options, such as bean bags, loungers, cinema seats, or sofa beds for two.
+                        </p>
+                    </li>
+    
+                    <li><b>Ultra XD</b>
+                        <p>
+                                an ultimate immersive experience with gigantic wall to wall, floor to ceiling screen powered
+                                by high resolution dual digital projectors, breathtaking multi-dimensional Dolby Atmos surround
+                                sound, brightest 3D, and comfortable seating with customized geometry for best view.
+                        </p>
+                    </li>
+    
+                    <li><b>Cinemaxx Gold</b>
+                        <p>
+                                Cinemaxx’s VIP offering, replete with lavish recliner chairs and gourmet F&B offerings served by attendants on call.
+                        </p>
+                    </li>
+    
+                    <li><b>Cinemaxx Regular</b>
+                        <p>
+                                State-of-the-art audiovisual experience with most advanced projection system and high fidelity digital
+                                audio experience while having the best view from every seat.<br>
+                        </p>
+                    </li>
+                </ol>
+    
+                <p>For further information about Cinemaxx please contact <a href="#">feedback@cinemaxxtheater.com</a></p>
+                <p>For Media info, please go to Press Room or send an email to <a href="#">Press Room</a> atau mengirimkan email ke <a href="#">media@cinemaxxtheater.com</a></p>
+                <p>For info on advertising, please email <a href="#">sales@cinemaxxtheater.com</a></p>
+                <p>For partnership proposal, please email <a href="#">marketing@cinemaxxtheater.com</a></p>
+                <p>Untuk terhubung dengan kami, silahkan ikuti Twitter @cinemaxxtheater dan klik Like di Facebook Cinemaxx Theater</p>
+            </div>
+        </div>
     </div>
 
 <!-- footer -->
