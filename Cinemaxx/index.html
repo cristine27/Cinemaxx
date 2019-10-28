@@ -52,7 +52,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="QbuyModalCentered">Login</h5>
+                                            <h5 class="modal-title" id="QbuyModalCentered">Quick Buy</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -70,14 +70,88 @@
                                             </ul>
 
                                             <div class="tab-content">
-                                                <div id="menu1" class="tab-pane fade in active">
-                                                    <p>ntr ada form</p>
-                                                </div>
-                                                <div id="menu2" class="tab-pane fade">
-                                                    <p>ada semacam kotak edit text mirip androst dan buton</p>
+                                                    <div id="menu1" class="tab-pane fade in active">
+                                                        <p>1. Select Movie</p>
+                                                        <div class="dropdown">
+                                                                <!--Trigger-->
+                                                            <button class="btn btn-primary dropdown-toggle" type="button" id="Menu-movie"
+                                                                data-toggle="dropdown">MOVIE
+                                                            </button>
+                                                              
+                                                                <!--Menu-->
+                                                            <div class="dropdown-menu dropdown-primary" id="movies">
+                                                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Batman</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Maleficent</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">US</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Aladdin</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Shaun the Sheep</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Upin-Ipin</a>
+                                                                </div>
+                                                        </div>
+    
+                                                        <p>2. Select City</p>
+                                                        <div class="dropdown">
+                                                                <!--Trigger-->
+                                                            <button class="btn btn-primary dropdown-toggle" type="button" id="Menu-city"
+                                                                data-toggle="dropdown">CITY
+                                                            </button>
+                                                              
+                                                                <!--Menu-->
+                                                            <div class="dropdown-menu dropdown-primary" id="citys">
+                                                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Bandung</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Jakarta</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Medan</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Bogor</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Papua</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Bali</a>
+                                                                </div>
+                                                        </div>
+    
+                                                        <p>3. Select Cinema</p>
+                                                        <div class="dropdown">
+                                                                <!--Trigger-->
+                                                            <button class="btn btn-primary dropdown-toggle" type="button" id="Menu-cinema"
+                                                                data-toggle="dropdown">CINEMA
+                                                            </button>
+                                                              
+                                                                <!--Menu-->
+                                                            <div class="dropdown-menu dropdown-primary" id="cinemas">
+                                                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Cihampelan Walk</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Paris Van Java</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Istana Plaza</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Bandung Indah Plaza</a>
+                                                                </div>
+                                                        </div>
+                                                        
+                                                            
+                                                        <p>4. Select Showtime</p>
+                                                        <div class="dropdown">
+                                                                <!--Trigger-->
+                                                            <button class="btn btn-primary dropdown-toggle" type="button" id="Menu-time"
+                                                                data-toggle="dropdown">Show Time
+                                                            </button>
+                                                              
+                                                                <!--Menu-->
+                                                            <div class="dropdown-menu dropdown-primary" id="times">
+                                                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Today, October 28</a>
+                                                                <a class="dropdown-item mdb-dropdownLink-1" href="#">Tommorow, October 29</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="menu2" class="tab-pane fade">
+                                                        <div class="form-group">
+                                                            <form>
+                                                                <label for="nump">Mobile Phone : </label>
+                                                                <input type="number" class="form-control" id="nump">
+                                                            </form>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
     
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-primary">Close</button>
