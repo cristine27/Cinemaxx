@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link tablink" onclick="openContent(this,'home')" href="#">Home
                             <span class="sr-only">(current)</span>
                         </a>
@@ -103,20 +103,21 @@
                                     <div class="modal-body">
                                         <!-- form login -->
                                         <form>
-                                            <div class="form-group row">
-                                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                                                <div class="col-sm-10">
-                                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                                </div>
-
-                                                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                                                <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Password:</label>
+                                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                                </label>
                                             </div>
                                         </form>
                                     </div>
-
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary">Login</button>
                                     </div>
@@ -186,119 +187,93 @@
         <!-- nav tabs -->    
         <section class="py-5">
             <div class="container">
-                <ul class="nav nav-tabs" role="tablist" id="myTab">
+                <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="nowplaying-tab" role="tab" data-toogle="tab" aria-selected="true" aria-controls="nowplaying" href="#nowplaying">NOW SHOWING</a>
+                        <a class="nav-link active" data-toggle="tab" href="#nowplay">Now Playing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id ="comingsoon-tab" data-toogle="tab" role="tab" aria-controls="comingsoon" aria-selected="false" href="#comingsoon">COMING SOON</a>
+                        <a class="nav-link" data-toggle="tab" href="#comingsoon">Coming Soon</a> 
                     </li>
                 </ul>
 
-                <div class="tab-content" id="myTabContent">
-                    <!-- now playing -->
-                    <div id="nowplaying" class="container tab-pane active" role="tabpanel" aria-labelledby="nowplaying-tab">
+                <div class="tab-content">
+                    <!-- Now Playing -->
+                    <div id="nowplay" class="container tab-pane active">
                         <br>
                         <div class="row">
                             <div class="col">
                                 <img class="poster1" src="img/poster1.jpg">
-                                <div id="caption">
-                                    <h5>Us</h5>
-                                    <p>1h 56min</p>
-                                </div>
-                                <div id="rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
+                                <h5>Us</h5>
+                                <p>2h 1min</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
                             </div>
-
                             <div class="col">
                                 <img class="poster1" src="img/poster2.jpg">
-                                <div id="caption">
-                                    <h5>Abominable</h5>
-                                    <p>1h 37min</p>
-                                </div>
-                                <div id="rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
+                                <h5>Abominable</h5>
+                                <p>1h 37min</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
                             </div>
-
                             <div class="col">
                                 <img class="poster1" src="img/poster3.jpg">
-                                <div id="caption">
-                                    <h5>Maleficent: Mistress of Evil</h5>
-                                    <p>1h 58min</p>
-                                </div>
-                                <div id="rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
+                                <h5>Maleficent: Mistress of Evil</h5>
+                                <p>1h 58min</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
                             </div>
-
                             <div class="col">
                                 <img class="poster1" src="img/poster5.jpg">
-                                <div id="caption">
-                                    <h5>Aladdin</h5>
-                                    <p>2h 8min</p>
-                                </div>
-                                    <div id="rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
+                                <h5>Aladdin</h5>
+                                <p>2h 8min</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- coming soon -->
-                    <div id="comingsoon" class="tab-pane container fade" role="tabpanel" aria-labelledby="comingsoon-tab"><br>
+                    <!-- Coming soon -->
+                    <div id="comingsoon" class="container tab-pane fade">
+                        <br>
                         <div class="row">
                             <div class="col">
                                 <img class="poster1" src="img/poster4.jpg">
-                                <div id="caption">
-                                    <h5>Frozen 2</h5>
-                                    <p>2h 0min</p>
-                                    <p>November 2019</p>
-                                </div>
+                                <h5>Frozen 2</h5>
+                                <p>2h 0min</p>
+                                <p>November 2019</p>
                             </div>
-
                             <div class="col">
                                 <img class="poster1" src="img/poster6.jpg">
-                                <div id="caption">
-                                    <h5>Charlie's Angels</h5>
-                                    <p>1h 59min</p>
-                                    <p>30 October 2019</p>
-                                </div>
+                                <h5>Charlie's Angels</h5>
+                                <p>1h 59min</p>
+                                <p>30 October 2019</p>
                             </div>
-
                             <div class="col">
                                 <img class="poster1" src="img/poster7.jpg">
-                                <div id="caption">
-                                    <h5>Terminator: Dark Fate</h5>
-                                    <p>2h 14min</p>
-                                    <p>26 October 2019</p>
-                                </div> 
+                                <h5>Terminator: Dark Fate</h5>
+                                <p>2h 14min</p>
+                                <p>26 October 2019</p>
                             </div>
-
                             <div class="col">
                                 <img class="poster1" src="img/poster8.jpg">
-                                <div id="caption">
-                                    <h5>Last Christmas</h5>
-                                    <p>1h 45min</p>
-                                    <p>7 November 2019</p>
-                                </div> 
+                                <h5>Last Christmas</h5>
+                                <p>1h 43min</p>
+                                <p>7 November 2019</p>
                             </div>
                         </div>
                     </div>

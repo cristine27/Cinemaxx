@@ -43,6 +43,11 @@ p{
     color: orange;
 }
 
+#btnbuy{
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
 /* css sign up */
 /* @extend display-flex; */
 display-flex {
