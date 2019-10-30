@@ -59,4 +59,50 @@ function validateCaptcha() {
     alert("Invalid Captcha. try Again");
     createCaptcha();
   }
+
+  function validasi_input(form){
+    var minchar = 8;
+    pola_email=/^[a-ZA-Z0-9._-]+@[a-ZA-Z0-9-]+.[a-zA-Z]{2,4}$/;
+
+    if(form.nama.value==""){
+      alert("Nama harus di isi");
+      form.nama.focus();
+      return (false);
+    }
+    else if(form.email.value==""){
+      alert("Email harus di isi");
+      form.email.focus();
+      return (false);
+    }
+    else if(!pola_email.test(form.email.value)){
+      alert("Penulisan email tidak benar");
+      form.email.focus();
+      return (false);
+    }
+    else if(form.password.value==""){
+      alert("Password harus di isi");
+      form.password.focus();
+      return (false);
+    }
+    else{
+      return (true);
+    }
+  }
+
+  function checkPass(){
+    var warnaBenar = "#66cc66";
+    var warnaSalah = "#ff6666";
+    var pass = document.getElementById('password');
+    if(pass.value.length<minchar){
+        alert("Password minimal 8 karakter");
+        pass.style.backgroundColor = warnaSalah;
+        message.style.color = warnasalah;
+        message.innerHTML = "!";
+    }
+    else{
+      pass.style.backgroundColor = warnaBenar;
+      message.style.color = warnaBenar;
+      message.innerHTML = "";
+    }
+  }
 }
