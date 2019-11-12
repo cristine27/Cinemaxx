@@ -15,8 +15,7 @@
         <div class="main">
             <div class="container-signup">
                 <div class="signup-content">
-                    <form name="signUpForm" method="POST" id="signup-form" class="signup-form" action="index.html"
-                    onsubmit="return validasi_input()">
+                    <form name="signUpForm" method="POST" id="signup-form" class="signup-form" action="index.html">
                         <h2>Sign Up</h2>
                         <p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>
 
@@ -34,6 +33,7 @@
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
+                        <input type="submit" value="Sign up" onclick="return validasi_input()"/>
                         <div class="textCaptcha">
                             <form action="SignUp.html">
                                 <div id="captcha"></div>
@@ -41,7 +41,7 @@
                                 <input type="submit" class="btn btn-secondary" value="submit" onclick="validateCaptcha()" style="width: 100px; background: burlywood;">
                             </form>
                         </div>
-                        <input type="submit" value="Sign up"/>
+                        
                         <a href="index.html">Sign in</a>
                     </form>
                 </div>
