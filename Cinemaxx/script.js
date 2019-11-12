@@ -59,6 +59,7 @@ function validateCaptcha() {
     alert("Invalid Captcha. try Again");
     createCaptcha();
   }
+}
 
   function validasi_input(form){
     var minchar = 8;
@@ -105,4 +106,3 @@ function validateCaptcha() {
       message.innerHTML = "";
     }
   }
-}
