@@ -26,21 +26,63 @@ function validasi_input(){
 
 //   validasi password sign up
   function checkPass(){
-    var warnaBenar = "#66cc66";
-    var warnaSalah = "#ff6666";
-    var pass = document.getElementById('password');
-    if(pass.value.length<minchar){
-        alert("Password minimal 8 karakter");
-        pass.style.backgroundColor = warnaSalah;
-        message.style.color = warnasalah;
-        message.innerHTML = "!";
-    }
-    else{
-      pass.style.backgroundColor = warnaBenar;
-      message.style.color = warnaBenar;
-      message.innerHTML = "";
-    }
+    var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
   }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
 
 //   validasi login
   function validateForm(){
@@ -73,5 +115,5 @@ function validasi_input(){
         return false;
     }
   }
-
+}
  
