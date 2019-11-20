@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="jquery.seat-charts.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 </head>
 
 <body>
@@ -347,8 +348,27 @@
 <!-- End Of Home Section -->
 
 <!-- Ticket section -->
-<div id="ticket" class="ticket tabs w3-container" style="display: none;">
-    <p>ini section ticket</p>
+<div id="ticket" class="ticket tabs container" style="display: none;">
+    <div class="container demo">
+        <div id="seat-map">
+            <div class="front">SCREEN</div>
+        </div>
+
+        <div class="booking details">
+            <p>Movie : <span>Judul</span></p>
+            <p>Time : <span>November 3, 21:00</span></p>
+            <p>Seat : </p>
+            <ul id="selected-seats"></ul>
+                <p>Tickets : <span id="counter">0</span></p>
+                <p>Total : <b>$<span id="total"></span></b></p>
+
+            <button class="checkout-button">BUY</button>
+
+            <div id="legend"></div>
+        </div>
+    </div>
+
+    <div style="clear:booth"></div>
 </div>
 <!-- end of ticket section -->
 
@@ -1010,7 +1030,7 @@
         </div>
     </div>
 </div>
-<!-- end of ticket section -->
+<!-- end of movie section -->
 
 
 <!-- about section -->
@@ -1160,7 +1180,81 @@
     </div>
 </footer>
 <!-- end of footer section -->
-<script src="script.js"></script>
-<script src="scriptValidasi.js"></script>
+<script>
+var price = 10; //price
+$(document).ready(function() {
+	var $cart = $('#selected-seats'), //Sitting Area
+	$counter = $('#counter'), //Votes
+	$total = $('#total'); //Total money
+	
+	var sc = $('#seat-map').seatCharts({
+		map: [  //Seating chart
+			'aaaa__aaaa',
+            'aaaa__aaaa',
+            'aaaa__aaaa',
+            'aaaa__aa__',
+			'aaaaaaaaaa'
+		],
+		naming : {
+			top : false,
+			getLabel : function (character, row, column) {
+				return column;
+			}
+		},
+		legend : { //Definition legend
+			node : $('#legend'),
+			items : [
+				[ 'a', 'available',   'Option' ],
+				[ 'a', 'unavailable', 'Sold']
+			]					
+		},
+		click: function () { //Click event
+			if (this.status() == 'available') { //optional seat
+				$('<li>R'+(this.settings.row+1)+' S'+this.settings.label+'</li>')
+					.attr('id', 'cart-item-'+this.settings.id)
+					.data('seatId', this.settings.id)
+					.appendTo($cart);
+
+				$counter.text(sc.find('selected').length+1);
+				$total.text(recalculateTotal(sc)+price);
+							
+				return 'selected';
+			} else if (this.status() == 'selected') { //Checked
+					//Update Number
+					$counter.text(sc.find('selected').length-1);
+					//update totalnum
+					$total.text(recalculateTotal(sc)-price);
+						
+					//Delete reservation
+					$('#cart-item-'+this.settings.id).remove();
+					//optional
+					return 'available';
+			} else if (this.status() == 'unavailable') { //sold
+				return 'unavailable';
+			} else {
+				return this.style();
+			}
+		}
+	});
+	//sold seat
+	sc.get(['1_2', '4_4','4_5','6_6','6_7','8_5','8_6','8_7','8_8', '10_1', '10_2']).status('unavailable');
+		
+});
+//sum total money
+function recalculateTotal(sc) {
+	var total = 0;
+	sc.find('selected').each(function () {
+		total += price;
+	});
+			
+	return total;
+}
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="scriptValidasi.js"></script>
+<script type="text/javascript" src="jquery.seat-charts.js"></script>
+<script type="text/javascript" src="jquery.js"></script> 
+<script type="text/javascript" src="jquery.seat-charts.min.js"></script>
 </body>
 </html>
