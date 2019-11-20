@@ -1,5 +1,5 @@
 div.seatCharts-container {
-	/*min-width: 700px;*/
+	min-width: 700px;
 }
 div.seatCharts-cell {
 
@@ -25,11 +25,11 @@ div.seatCharts-seat {
 div.seatCharts-seat:focus {
 	border: none;
 }
-/*
+
 .seatCharts-seat:focus {
 	outline: none;
 }
-*/
+
 
 div.seatCharts-space {
 	background-color: white;
@@ -63,6 +63,7 @@ ul.seatCharts-legendList {
 	list-style: none;
 }
 li.seatCharts-legendItem {
-	margin-top: 10px;
-	line-height: 2;
+	/* margin-top: 10px;
+	line-height: 2; */
+	margin-bottom: 100px;
 }

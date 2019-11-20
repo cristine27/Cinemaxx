@@ -52,105 +52,6 @@
                         </ul>
                     </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#QbuyModal">Quick Buy</a>
-
-                        <div class="modal fade" id="QbuyModal" tabindex="-1" role="dialog" aria-labelledby="QbuyModalCentered" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="QbuyModalCentered">Quick Buy</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul class="nav">
-                                            <li class="nav-item active">
-                                                <a class="nav-link" data-toggle="tab" href="#menu1" style="color: blue;">Quick Buy</a>
-                                            </li>
-                                            
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="tab" href="#menu2" style="color: blue;">Check Purchase</a>
-                                            </li>
-                                        </ul>
-
-                                        <div class="tab-content">
-                                            <div id="menu1" class="tab-pane active">
-                                                <div class="dropdown"> 
-                                                    <label>Select Movie</label>
-                                                    <br>
-                                                    <div class="container">
-                                                        <select class="selectMenu" data-live-search="true">
-                                                            <option data-tokens="Batman">Batman</option>
-                                                            <option data-tokens="Maleficent">Maleficent</option>
-                                                            <option data-tokens="US">US</option>
-                                                            <option data-tokens="Aladdin">Aladdin</option>
-                                                            <option data-tokens="Shaun">Shaun the Sheep</option>
-                                                            <option data-tokens="Upin">Upin - Ipin</option>
-                                                        </select>
-                                                    </div>       
-                                                </div>
-
-                                                <div class="dropdown">
-                                                    <label>Select City</label>
-                                                    <br>
-                                                    <div class="container">
-                                                        <select class="selectMenu" data-live-search="true">
-                                                            <option data-tokens="Bandung">Bandung</option>
-                                                            <option data-tokens="Jakarta">Jakarta</option>
-                                                            <option data-tokens="Medan">Medan</option>
-                                                            <option data-tokens="Bogor">Bogor</option>
-                                                            <option data-tokens="Papua">Papua</option>
-                                                            <option data-tokens="Bali">Bali</option>
-                                                        </select>
-                                                    </div>
-                                                </div>    
-                                                        
-                                                <div class="dropdown">
-                                                    <label>Select Cinema</label>
-                                                    <br>
-                                                    <div class="container">
-                                                        <select class="selectMenu" data-live-search="true">
-                                                            <option data-tokens="CihampelasWalk">Cihampelas Walk</option>
-                                                            <option data-tokens="ParisVanJava">Paris Van Java</option>
-                                                            <option data-tokens="IstanaPlaza">Istana Plaza</option>
-                                                            <option data-tokens="BandungIndahPlaza">Bandung Indah Plaza</option>
-                                                        </select> 
-                                                    </div>                                                
-                                                </div>
-                                                
-                                                <div class="dropdown">
-                                                    <label>Select Showtime</label>
-                                                    <br>
-                                                    <div class="container">
-                                                        <select class="selectMenu" data-live-search="true">
-                                                            <option data-tokens="today">Today, October 28</option>
-                                                            <option data-tokens="tommorow">Tommorow, October 29</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <input onclick="" type="button" class="btn btn-info" value="Input">
-                                            </div>
-
-                                            <div id="menu2" class="tab-pane fade">
-                                                <div class="form-group">
-                                                    <form name="phoneCheck" action="index.html">
-                                                        <label for="nump">Mobile Phone : </label>
-                                                        <input type="text" class="form-control" id="nump">
-                                                        <br>
-                                                        <input onclick="phoneNum(document.phoneCheck.nump)"type="button" class="form-control" id="input" value="Check" style="color: white; background: black; width: 100px;">
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                     <!-- Login & Modal for Login -->
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
@@ -200,151 +101,221 @@
 <!-- end of navbar -->
 
  <!-- Home section -->
-<div id="home" class="home tabs" style="display: block;">
+<div id="home" class="home tabs" style="display: block;"><br>
+    <div class="row">
+        <!-- quick buy content -->
+        <div class="card col-sm-4" style="width: 400px; height: 70%;">
+            <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" data-toggle="tab" href="#menu1" style="color: blue;">Quick Buy</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu2" style="color: blue;">Check Purchase</a>
+                    </li>
+                </ul><hr>
     
-    <!-- carousel -->
-    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselIndicators" data-slide-to="4"></li>
-        </ol>
+                <div class="tab-content">
+                    <div id="menu1" class="tab-pane active">
+                        <h4 class="text-center">Quick Tickets</h4>
+                        <div class="dropdown"> 
+                            <label>Select Movie</label>
+                            <br>
+                            <div class="container">
+                                <select class="selectMenu" data-live-search="true" style="width: 50%;">
+                                    <option data-tokens="Batman">Batman</option>
+                                    <option data-tokens="Maleficent">Maleficent</option>
+                                    <option data-tokens="US">US</option>
+                                    <option data-tokens="Aladdin">Aladdin</option>
+                                    <option data-tokens="Shaun">Shaun the Sheep</option>
+                                    <option data-tokens="Upin">Upin - Ipin</option>
+                                </select>
+                            </div>       
+                        </div>
 
+                        <div class="dropdown">
+                            <label>Select City</label>
+                            <br>
+                            <div class="container">
+                                <select class="selectMenu" data-live-search="true" style="width: 50%;">
+                                    <option data-tokens="Bandung">Bandung</option>
+                                    <option data-tokens="Jakarta">Jakarta</option>
+                                    <option data-tokens="Medan">Medan</option>
+                                    <option data-tokens="Bogor">Bogor</option>
+                                    <option data-tokens="Papua">Papua</option>
+                                    <option data-tokens="Bali">Bali</option>
+                                </select>
+                            </div>
+                        </div>    
+                                
+                        <div class="dropdown">
+                            <label>Select Cinema</label>
+                            <br>
+                            <div class="container">
+                                <select class="selectMenu" data-live-search="true" style="width: 50%;">
+                                    <option data-tokens="CihampelasWalk">Cihampelas Walk</option>
+                                    <option data-tokens="ParisVanJava">Paris Van Java</option>
+                                    <option data-tokens="IstanaPlaza">Istana Plaza</option>
+                                    <option data-tokens="BandungIndahPlaza">Bandung Indah Plaza</option>
+                                </select> 
+                            </div>                                                
+                        </div>
+                        
+                        <div class="dropdown">
+                            <label>Select Showtime</label>
+                            <br>
+                            <div class="container">
+                                <select class="selectMenu" data-live-search="true" style="width: 50%;">
+                                    <option data-tokens="today">Today, October 28</option>
+                                    <option data-tokens="tommorow">Tommorow, October 29</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <input onclick="" type="button" class="btn btn-info" value="Buy Ticket">
+                    </div>
+
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="form-group">
+                            <form name="phoneCheck" action="index.html">
+                                <label for="nump">Mobile Phone : </label>
+                                <input type="text" class="form-control" id="nump">
+                                <br>
+                                <input onclick="phoneNum(document.phoneCheck.nump)"type="button" class="form-control" id="input" value="Check" style="color: white; background: black; width: 100px;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- carousel -->
+    <div id="carouselIndicators" class="carousel slide col-sm-8" data-ride="carousel" style="width: 65%;"> 
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="img/img1.jpg" alt="maleficent">
+                <img src="img/img1.jpg" alt="maleficent" style="width: 100%; height: 70%;">
             </div>
 
             <div class="carousel-item">
-                <img src="img/img2.jpg" alt="EXIT">
+                <img src="img/img2.jpg" alt="EXIT" style="width: 100%; height: 70%;">
+            </div>
+    
+            <div class="carousel-item">
+                <img src="img/img3.jpg" alt="Lion King" style="width: 100%; height: 70%;">
             </div>
 
             <div class="carousel-item">
-                <img src="img/img3.jpg" alt="Lion King">
+                <img src="img/img4.jpg" alt="Joker" style="width: 100%; height: 70%;">
             </div>
 
             <div class="carousel-item">
-                <img src="img/img4.jpg" alt="Joker">
-            </div>
-
-            <div class="carousel-item">
-                <img src="img/img5.jpg" alt="Bumi Manusia">
+                <img src="img/img5.jpg" alt="Bumi Manusia" style="width: 100%; height: 70%;">
             </div>
         </div>
-
+    
         <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-
+    
         <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <!-- end of carousel -->
+    </div>
 
-    <!-- nav tabs -->    
-    <section class="py-5">
-        <div class="container">
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#nowplay">Now Playing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#comingsoon">Coming Soon</a> 
-                </li>
-            </ul>
-
-            <div class="tab-content">
-                <!-- Now Playing -->
-                <div id="nowplay" class="container tab-pane active">
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <img class="poster1" src="img/poster1.jpg">
-                            <h5>Us</h5>
-                            <p>2h 1min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster2.jpg">
-                            <h5>Abominable</h5>
-                            <p>1h 37min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster3.jpg">
-                            <h5>Maleficent: Mistress of Evil</h5>
-                            <p>1h 58min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster5.jpg">
-                            <h5>Aladdin</h5>
-                            <p>2h 8min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <button type="button" class="btn btn-dark" id="btnbuy">Buy Ticket</button>
-                        </div>
+    <!-- tab content -->
+    <div class="container">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#nowplay">Now Playing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#comingsoon">Coming Soon</a> 
+            </li>
+        </ul>
+    
+        <div class="tab-content">
+            <!-- Now Playing -->
+            <div id="nowplay" class="container tab-pane active">
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <img class="poster1" src="img/poster1.jpg">
+                        <h5>Us</h5>
+                        <p>2h 1min</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col">
+                        <img class="poster1" src="img/poster2.jpg">
+                        <h5>Abominable</h5>
+                        <p>1h 37min</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col">
+                        <img class="poster1" src="img/poster3.jpg">
+                        <h5>Maleficent: Mistress of Evil</h5>
+                        <p>1h 58min</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col">
+                        <img class="poster1" src="img/poster5.jpg">
+                        <h5>Aladdin</h5>
+                        <p>2h 8min</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
                     </div>
                 </div>
-
-                <!-- Coming soon -->
-                <div id="comingsoon" class="container tab-pane fade">
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <img class="poster1" src="img/poster4.jpg">
-                            <h5>Frozen 2</h5>
-                            <p>2h 0min</p>
-                            <p>November 2019</p>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster6.jpg">
-                            <h5>Charlie's Angels</h5>
-                            <p>1h 59min</p>
-                            <p>30 October 2019</p>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster7.jpg">
-                            <h5>Terminator: Dark Fate</h5>
-                            <p>2h 14min</p>
-                            <p>26 October 2019</p>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster8.jpg">
-                            <h5>Last Christmas</h5>
-                            <p>1h 43min</p>
-                            <p>7 November 2019</p>
-                        </div>
+            </div>
+    
+            <!-- Coming soon -->
+            <div id="comingsoon" class="container tab-pane fade">
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <img class="poster1" src="img/poster4.jpg">
+                        <h5>Frozen 2</h5>
+                        <p>2h 0min</p>
+                        <p>November 2019</p>
+                    </div>
+                    <div class="col">
+                        <img class="poster1" src="img/poster6.jpg">
+                        <h5>Charlie's Angels</h5>
+                        <p>1h 59min</p>
+                        <p>30 October 2019</p>
+                    </div>
+                    <div class="col">
+                        <img class="poster1" src="img/poster7.jpg">
+                        <h5>Terminator: Dark Fate</h5>
+                        <p>2h 14min</p>
+                        <p>26 October 2019</p>
+                    </div>
+                    <div class="col">
+                        <img class="poster1" src="img/poster8.jpg">
+                        <h5>Last Christmas</h5>
+                        <p>1h 43min</p>
+                        <p>7 November 2019</p>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</div>        
 <!-- End Of Home Section -->
 
 <!-- Ticket section -->
@@ -354,10 +325,10 @@
             <div class="front">SCREEN</div>
         </div>
 
-        <div class="booking details container">
+        <div class="booking details container"><br>
             <p>Movie : <span>Judul</span></p>
             <p>Time : <span>November 3, 21:00</span></p>
-            <p>Seat : </p>
+            <p>Seat : </p><br>
             <ul id="selected-seats"></ul>
                 <p>Tickets : <span id="counter">0</span></p>
                 <p>Total : <b>$<span id="total"></span></b></p>
