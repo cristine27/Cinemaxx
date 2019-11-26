@@ -59,7 +59,6 @@
                             <ul class="dropdown-menu">
                                 <li><a href="#" onclick="openContent(this,'aboutIndo')">About-indonesia</a></li>
                                 <li><a href="#" onclick="openContent(this,'aboutEng')">About-english</a></li>
-                                <li><a href="#" onclick="openContent(this,'fasilitas')">Cinemas</a></li>
                             </ul>
                         </li>
 
@@ -110,31 +109,128 @@
                             <a class="nav-link" href="SignUp.html">Register</a>
                         </li>
                     </ul>
+
+                    <button class="btn btn-warning mx-2 navbar-toggler-right" type="submit" data-toggle="modal" data-target="#modalLoginForm">SignIn</button>
+                    <div class="modal fade shadow-lg" id="modalLoginForm" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content" style="background-color: black;">
+                                <div class="modal-header text-center">
+                                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                    <span style="color: black;">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body mx-3" style="color: white;">
+                                    <div class="md-form mb-4">
+                                    <i class="fas fa-envelope prefix grey-text"></i>
+                                    <label >Email</label>
+                                    <input type="email" id="defaultForm-email" class="form-control validate">
+                                    </div>
+                    
+                                    <div class="md-form mb-4">
+                                    <i class="fas fa-lock prefix grey-text"></i>
+                                    <label>Password</label>
+                                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                                    </div>
+                    
+                                    <div class="md-form text-center">
+                                        <label class="text-center" style="color: white;">Dont have any account yet? <a href="#" style="color: #0EF5FE;" data-dismiss="modal" data-toggle="modal" data-target="#modalSignUp">Register Now.</a></label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button class="btn btn-modal" style="background-color: #0EF5FE; color: black;">Login</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-warning" type="submit" data-toggle="modal" data-target="#modalSignUp">SignUp</button>
+                        <div class="modal fade shadow-lg" id="modalSignUp" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content" style="background-color: black;">
+                                    <div class="modal-header text-center" style="background-color: #0EF5FE;">
+                                        <h4 class="modal-title w-100 font-weight-bold">Sign Up</h4>
+                                        <button type="button" class="close" data-dismiss="modal">
+                                        <span style="color: black;">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body mx-3" style="color: white;">
+                    
+                                        <div class="md-form mb-4">
+                                        <i class="fas fa-user prefix grey-text"></i>
+                                        <label>Name</label>
+                                        <input type="text" id="defaultForm-email" class="form-control validate" placeholder="Name">
+                                        </div>
+                    
+                                        <div class="md-form mb-4">
+                                        <i class="fas fa-envelope prefix grey-text"></i>
+                                        <label >Email</label>
+                                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Email">
+                                        </div>
+                        
+                                        <div class="md-form mb-4">
+                                        <i class="fas fa-lock prefix grey-text"></i>
+                                        <label>Password</label>
+                                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password">
+                                        </div>
+                    
+                                        <div class="md-form mb-4">
+                                        <i class="fas fa-lock prefix grey-text"></i>
+                                        <label>Confirm Password</label>
+                                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Confirm Password">
+                                        </div>
+                    
+                                        <div class="md-form">
+                                            <label for="pwd">Captcha</label>
+                            
+                                            <!-- input captcha -->
+                                            <div class="captcha-code d-flex mb-2">
+                                                <div class="code border p-4 w-25">
+                                                    <div class="dynamic-code"></div>
+                                                </div>
+                                                <div class="ml-3 d-flex flex-column">
+                                                    <i class="fas fa-sync captcha-reload mt-3 "></i>
+                                                    <i class="fas fa-volume-up mt-2"></i>
+                                                </div>
+                                            </div>
+                                            <div class="captcha-input">
+                                                <input type="text" class="form-control" id="captcha-input"  required autocomplete="off"  placeholder="Enter captcha code">
+                                                <span id="errCaptcha"></span>
+                                            </div>
+                            
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                            <button class="btn btn-modal" src="index.html" style="background-color: #0EF5FE; color: black;">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                 </div>
             </div>
         </nav>
-    </header>
-    <!-- end of navbar -->
 
-    <div class="modal" id="popup">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                          <h4 class="modal-title">Modal Heading</h4>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-  
-                    <div class="modal-body">
-                          Modal body..
-                  </div>
-                  <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <div class="modal" id="popup">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
+      
+                        <div class="modal-body">
+                              Modal body..
+                      </div>
+                      <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                    </div>
                 </div>
             </div>
-        </div>
+    </header>
 
-
+    <!-- end of navbar -->
 
     <!-- Home section -->
     <div id="home" class="home tabs" style="display: block;"><br>
@@ -279,135 +375,22 @@
                     <br>
                     <div class="row">
                         <div class="col">
-                            <img class="poster1" src="img/poster1.jpg">
-                            <h5>Us</h5>
+                            <a href="#" data-toggle="modal" data-target="#usmodal">
+                                <img class="poster1" src="img/poster1.jpg">
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#usmodal">
+                                <h5>Us</h5>
+                            </a>
                             <p>2h 1min</p>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster2.jpg">
-                            <h5>Abominable</h5>
-                            <p>1h 37min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster3.jpg">
-                            <h5>Maleficent: Mistress of Evil</h5>
-                            <p>1h 58min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster5.jpg">
-                            <h5>Aladdin</h5>
-                            <p>2h 8min</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
+                            
+                            <button type="button" class="btn-default" onclick="openContent(this,'usTicket')">Buy Ticket</button>
 
-                <!-- Coming soon -->
-                <div id="comingsoon" class="container tab-pane fade">
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <img class="poster1" src="img/poster4.jpg">
-                            <h5>Frozen 2</h5>
-                            <p>2h 0min</p>
-                            <p>November 2019</p>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster6.jpg">
-                            <h5>Charlie's Angels</h5>
-                            <p>1h 59min</p>
-                            <p>30 October 2019</p>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster7.jpg">
-                            <h5>Terminator: Dark Fate</h5>
-                            <p>2h 14min</p>
-                            <p>26 October 2019</p>
-                        </div>
-                        <div class="col">
-                            <img class="poster1" src="img/poster8.jpg">
-                            <h5>Last Christmas</h5>
-                            <p>1h 43min</p>
-                            <p>7 November 2019</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Of Home Section -->
-
-    <!-- Ticket section -->
-    <div id="ticket" class="ticket tabs container" style="display: none;">
-        <div class="container demo">
-            <div id="seat-map" class="container">
-                <div class="front">SCREEN</div>
-            </div>
-
-            <div class="booking details container"><br>
-                <p>Movie : <span>Judul</span></p>
-                <p>Time : <span>November 3, 21:00</span></p>
-                <p>Seat : </p><br>
-                <ul id="selected-seats"></ul>
-                <p>Tickets : <span id="counter">0</span></p>
-                <p>Total : <b>$<span id="total"></span></b></p>
-
-                <button class="checkout-button">BUY</button>
-            </div>
-
-            <div id="legend"></div>
-        </div>
-
-        <div style="clear:booth"></div>
-    </div>
-    <!-- end of ticket section -->
-
-    <!-- movie section -->
-    <div id="kumpulan" class="movies tabs w3-container" style="display: none;">
-        <div id="container">
-            <br>
-            <h1 class="text-center">Movies</h1><br>
-            <ul class="nav nav-pills" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="pill" href="#showing">Now Showing</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#soon">Coming Soon</a>
-                </li>
-            </ul>
-            <hr>
-
-            <div class="tab-content">
-                <div id="showing" class="container tab-pane active"><br>
-                    <!-- row satu  -->
-                    <div class="row">
-                        <div class="col">
-                            <p>Us</p>
-                            <a href="#" data-toggle="modal" data-target="#usModal">
-                                <img class="poster1" src="img/poster1.jpg">
-                            </a>
-
-                            <div class="modal fade" id="usModal" tabindex="-1" role="dialog"
+                            <div class="modal fade" id="usmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -472,21 +455,31 @@
                                                 </p>
                                             </div>
                                             <div class="container">
-                                                <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                <button type="button" class="btn btn-primary" onclick="openContent(this,'usTicket')">Buy Ticket</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="col">
-                            <p>Abominable</p>
-                            <a href="#" data-toggle="modal" data-target="#abominableModal">
+                            <a href="#" data-toggle="modal" data-target="#abominablemodal">
                                 <img class="poster1" src="img/poster2.jpg">
                             </a>
+                            <a href="#" data-toggle="modal" data-target="#abominablemodal">
+                                <h5>Abominable</h5>
+                            </a>
 
-                            <div class="modal fade" id="abominableModal" tabindex="-1" role="dialog"
+                            <p>1h 37min</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+
+                            <button type="button" class="btn-default" onclick="openContent(this,'abdoTicket')">Buy Ticket</button>
+
+                            <div class="modal fade" id="abominablemodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -551,21 +544,31 @@
                                                 </p>
                                             </div>
                                             <div class="container">
-                                                <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                <button type="button" class="btn btn-primary" onclick="openContent(this,'abdoTicket')">Buy Ticket</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="col">
-                            <p>Maleficent : Mistress of Evil</p>
-                            <a href="#" data-toggle="modal" data-target="#maleficentModal">
+                            <a href="#" data-target="#maleficentmodal" data-toggle="modal">
                                 <img class="poster1" src="img/poster3.jpg">
                             </a>
+                            <a href="#" data-target="#maleficentmodal" data-target="modal">
+                                <h5>Maleficent: Mistress of Evil</h5>
+                            </a>
 
-                            <div class="modal fade" id="maleficentModal" tabindex="-1" role="dialog"
+                            <p>1h 58min</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+
+                            <button type="button" class="btn-default" onclick="openContent(this,'maleTicket')">Buy Ticket</button>
+
+                            <div class="modal fade" id="maleficentmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -630,20 +633,32 @@
                                                 </p>
                                             </div>
                                             <div class="container">
-                                                <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                <button type="button" class="btn btn-primary" onclick="openContent(this,'maleTicket')">Buy Ticket</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col">
-                            <p>Aladdin</p>
-                            <a href="#" data-toggle="modal" data-target="#aladdinModal">
+                            <a href="#" data-target="#aladdinmodal" data-toggle="modal">
                                 <img class="poster1" src="img/poster5.jpg">
                             </a>
+                            <a href="#" data-target="#aladdinmodal" data-toggle="modal">
+                                <h5>Aladdin</h5>
+                            </a>
 
-                            <div class="modal fade" id="aladdinModal" tabindex="-1" role="dialog"
+                            <p>2h 8min</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+
+                            <button type="button" class="btn-default" onclick="openContent(this,'alaTicket')">Buy Ticket</button>
+
+                            <div class="modal fade" id="aladdinmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -708,7 +723,7 @@
                                                 </p>
                                             </div>
                                             <div class="container">
-                                                <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                <button type="button" class="btn btn-primary" onclick="openContent(this,'alaTicket')">Buy Ticket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -716,22 +731,27 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- Coming soon -->
+                <div id="comingsoon" class="container tab-pane fade">
                     <br>
-
-                    <!-- row dua -->
                     <div class="row">
                         <div class="col">
-                            <p>The Snow Queen: Mirrorlands</p>
-                            <a href="#" data-toggle="modal" data-target="#mirrorModal">
-                                <img class="poster1" src="img/film1.jpg">
+                            <a href="#" data-toggle="modal" data-target="#frozenmodal">
+                                <img class="poster1" src="img/poster4.jpg">
                             </a>
+                            <a href="#" data-toggle="modal" data-target="#frozenmodal">
+                                <h5>Frozen 2</h5>
+                            </a>
+                            <p>2h 0min</p>
+                            <p>November 2019</p>
 
-                            <div class="modal fade" id="mirrorModal" tabindex="-1" role="dialog"
+                            <div class="modal fade" id="frozenmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title" id="mirrorModalLabel">US</h4>
+                                            <h4 class="modal-title" id="frozenModalLabel">US</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -798,19 +818,26 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="col">
-                            <p>Midway</p>
-                            <a href="#" data-toggle="modal" data-target="#midwayModal">
-                                <img class="poster1" src="img/film2.jpg">
+                            <a href="#" data-target="#charliemodal" data-toggle="modal">
+                                <img class="poster1" src="img/poster6.jpg">
                             </a>
 
-                            <div class="modal fade" id="midwayModal" tabindex="-1" role="dialog"
+                            <a href="#" data-toggle="modal" data-target="#charliemodal">
+                                <h5>Charlie's Angels</h5>
+                            </a>
+
+                            <p>1h 59min</p>
+                            <p>30 October 2019</p>
+
+                            <div class="modal fade" id="frozenmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title" id="midwayModalLabel">US</h4>
+                                            <h4 class="modal-title" id="frozenModalLabel">US</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -877,19 +904,22 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col">
-                            <p>Crazy Rich Asians</p>
-                            <a href="#" data-toggle="modal" data-target="#crazyModal">
-                                <img class="poster1" src="img/film3.jpg">
+                            <a href="#" data-target="#terminatormodal" data-toggle="model">
+                                <img class="poster1" src="img/poster7.jpg">
                             </a>
+                            <a href="#" data-target="#terminatormodal" data-toggle="model">
+                                <h5>Terminator: Dark Fate</h5>
+                            </a>
+                            <p>2h 14min</p>
+                            <p>26 October 2019</p>
 
-                            <div class="modal fade" id="crazyModal" tabindex="-1" role="dialog"
+                            <div class="modal fade" id="terminatormodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title" id="crazyModalLabel">US</h4>
+                                            <h4 class="modal-title" id="terminatorModalLabel">US</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -956,85 +986,969 @@
                                 </div>
                             </div>
                         </div>
+                            <div class="col">
+                                <a href="#" data-toggle="modal" data-target="#lastmodal">
+                                    <img class="poster1" src="img/poster8.jpg">
+                                </a>
+                                <a href="#" data-toggle="modal" data-target="#lastmodal">
+                                    <h5>Last Christmas</h5>
+                                </a>
 
-                        <div class="col">
-                            <p>Avengers : Endgame</p>
-                            <a href="#" data-toggle="modal" data-target="#endModal">
-                                <img class="poster1" src="img/film4.jpg">
-                            </a>
+                                <p>1h 43min</p>
+                                <p>7 November 2019</p>
 
-                            <div class="modal fade" id="endModal" tabindex="-1" role="dialog"
-                                aria-labelledby="basicModal" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title" id="endModalLabel">US</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="modal-body">
-                                            <h1 class="display-4">Info</h1>
-                                            <div class="container">
-                                                <dl class="row">
-                                                    <dt class="col-sm-3">Release Date</dt>
-                                                    <dd class="col-sm-9">September 20, 2019</dd>
-
-                                                    <dt class="col-sm-3">Language</dt>
-                                                    <dd class="col-sm-9">English</dd>
-
-                                                    <dt class="col-sm-3">Genre</dt>
-                                                    <dd class="col-sm-9">Horror</dd>
-
-                                                    <dt class="col-sm-3">Cast & Crew</dt>
-                                                    <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth Moss,Tim
-                                                        Heidecker</dd>
-
-                                                    <dt class="col sm-3">Director</dt>
-                                                    <dd class="col-sm-9">Jordan Peele</dd>
-
-                                                    <dt class="col-sm-3">Length</dt>
-                                                    <dd class="col-sm-9">116 minutes</dd>
-                                                </dl>
+                                <div class="modal fade" id="terminatormodal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="terminatorModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
                                             </div>
 
-                                            <div class="container">
-                                                <h1 class="display-4">Synopsis</h1>
-                                                <p class="text-left">
-                                                    <p class="font-weight-bold">Bahasa Indonesia</p>
-                                                    Bersama suaminya, Adrian, Uwa-nya dan ketiga
-                                                    anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah yang
-                                                    tidak pernah dikunjunginya lagi sejak kedua orang tuanya menghilang
-                                                    tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
-                                                    menghilang
-                                                    selagi mereka disana, Sophie dan Adrian harus mencari tahu apa yang
-                                                    sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi kembali
-                                                    untuk Sophie.
-                                                </p>
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
 
-                                                <p class="text-left">
-                                                    <p class="font-weight-bold">English</p>
-                                                    Together with her husband,
-                                                    Adrian, her Uwa and her three children, Sophie returned to her
-                                                    childhood
-                                                    home. A house that he had not visited since his parents disappeared
-                                                    without
-                                                    a trace. And when Nina, her oldest child, apparently also
-                                                    disappeared while
-                                                    they were there, Sophie and Adrian had to find out what really
-                                                    happened in
-                                                    the house and prevent the tragedy from happening again for Sophie.
-                                                </p>
-                                            </div>
-                                            <div class="container">
-                                                <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Of Home Section -->
+
+        <!-- Ticket section -->
+        <div id="usTicket" class="ticket tab" style="height: 500px; display: none;">
+                <div id="seat-map" class="container">
+                        <div class="front">SCREEN</div>
+                </div>
+        
+                <div class="booking details container"><br>
+                    <p>Movie : <span>Us</span></p>
+                    <select class="browser-default custom-select" style="width: 15%;">
+                        <option selected>Select time</option>
+                        <option value="1">14.00</option>
+                        <option value="2">16.00</option>
+                        <option value="3">18.00</option>
+                        <option value="4">20.00</option>
+                    </select>
+                    <p>Seat : </p><br>
+                    <ul id="selected-seats"></ul>
+                    <p>Tickets : <span id="counter">0</span></p>
+                    <p>Total : <b>$<span id="total"></span></b></p>
+
+                    <button class="checkout-button">BUY</button>
+                
+
+                <div id="legend"></div>
+                </div>
+
+            <div style="clear:booth"></div>
+        </div>
+
+        <div id="abdoTicket" class="ticket tab" style="height: 500px; display: none;">
+                <div id="seat-map" class="container">
+                        <div class="front">SCREEN</div>
+                </div>
+        
+                <div class="booking details container"><br>
+                    <p>Movie : <span>Us</span></p>
+                    <select class="browser-default custom-select" style="width: 15%;">
+                        <option selected>Select time</option>
+                        <option value="1">14.00</option>
+                        <option value="2">16.00</option>
+                        <option value="3">18.00</option>
+                        <option value="4">20.00</option>
+                    </select>
+                    <p>Seat : </p><br>
+                    <ul id="selected-seats"></ul>
+                    <p>Tickets : <span id="counter">0</span></p>
+                    <p>Total : <b>$<span id="total"></span></b></p>
+
+                    <button class="checkout-button">BUY</button>
+                
+
+                <div id="legend"></div>
+                </div>
+
+            <div style="clear:booth"></div>
+        </div>
+
+        <div id="maleTicket" class="ticket tab" style="height: 500px; display: none;">
+                <div id="seat-map" class="container">
+                        <div class="front">SCREEN</div>
+                </div>
+        
+                <div class="booking details container"><br>
+                    <p>Movie : <span>Us</span></p>
+                    <select class="browser-default custom-select" style="width: 15%;">
+                        <option selected>Select time</option>
+                        <option value="1">14.00</option>
+                        <option value="2">16.00</option>
+                        <option value="3">18.00</option>
+                        <option value="4">20.00</option>
+                    </select>
+                    <p>Seat : </p><br>
+                    <ul id="selected-seats"></ul>
+                    <p>Tickets : <span id="counter">0</span></p>
+                    <p>Total : <b>$<span id="total"></span></b></p>
+
+                    <button class="checkout-button">BUY</button>
+                
+
+                <div id="legend"></div>
+                </div>
+
+            <div style="clear:booth"></div>
+        </div>
+
+        <div id="alaTicket" class="ticket tab" style="height: 500px; display: none;">
+                <div id="seat-map" class="container">
+                        <div class="front">SCREEN</div>
+                </div>
+        
+                <div class="booking details container"><br>
+                    <p>Movie : <span>Us</span></p>
+                    <select class="browser-default custom-select" style="width: 15%;">
+                        <option selected>Select time</option>
+                        <option value="1">14.00</option>
+                        <option value="2">16.00</option>
+                        <option value="3">18.00</option>
+                        <option value="4">20.00</option>
+                    </select>
+                    <p>Seat : </p><br>
+                    <ul id="selected-seats"></ul>
+                    <p>Tickets : <span id="counter">0</span></p>
+                    <p>Total : <b>$<span id="total"></span></b></p>
+
+                    <button class="checkout-button">BUY</button>
+                
+
+                <div id="legend"></div>
+                </div>
+
+            <div style="clear:booth"></div>
+        </div>
+
+        <div id="usTicket" class="ticket tab" style="height: 500px; display: none;">
+                <div id="seat-map" class="container">
+                        <div class="front">SCREEN</div>
+                </div>
+        
+                <div class="booking details container"><br>
+                    <p>Movie : <span>Us</span></p>
+                    <select class="browser-default custom-select" style="width: 15%;">
+                        <option selected>Select time</option>
+                        <option value="1">14.00</option>
+                        <option value="2">16.00</option>
+                        <option value="3">18.00</option>
+                        <option value="4">20.00</option>
+                    </select>
+                    <p>Seat : </p><br>
+                    <ul id="selected-seats"></ul>
+                    <p>Tickets : <span id="counter">0</span></p>
+                    <p>Total : <b>$<span id="total"></span></b></p>
+
+                    <button class="checkout-button">BUY</button>
+                
+
+                <div id="legend"></div>
+                </div>
+
+            <div style="clear:booth"></div>
+        </div>
+
+
+
+        <!-- end of ticket section -->
+
+        <!-- movie section -->
+        <div id="kumpulan" class="movies tabs w3-container" style="display: none;">
+            <div id="container">
+                <br>
+                <h1 class="text-center">Movies</h1><br>
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#showing">Now Showing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#soon">Coming Soon</a>
+                    </li>
+                </ul>
+                <hr>
+
+                <div class="tab-content">
+                    <div id="showing" class="container tab-pane active"><br>
+                        <!-- row satu  -->
+                        <div class="row">
+                            <div class="col">
+                                <p>Us</p>
+                                <a href="#" data-toggle="modal" data-target="#usModal">
+                                    <img class="poster1" src="img/poster1.jpg">
+                                </a>
+
+                                <div class="modal fade" id="usModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="usModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <p>Abominable</p>
+                                <a href="#" data-toggle="modal" data-target="#abominableModal">
+                                    <img class="poster1" src="img/poster2.jpg">
+                                </a>
+
+                                <div class="modal fade" id="abominableModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="abominableModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <p>Maleficent : Mistress of Evil</p>
+                                <a href="#" data-toggle="modal" data-target="#maleficentModal">
+                                    <img class="poster1" src="img/poster3.jpg">
+                                </a>
+
+                                <div class="modal fade" id="maleficentModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="maleficentModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p>Aladdin</p>
+                                <a href="#" data-toggle="modal" data-target="#aladdinModal">
+                                    <img class="poster1" src="img/poster5.jpg">
+                                </a>
+
+                                <div class="modal fade" id="aladdinModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="aladdinModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <!-- row dua -->
+                        <div class="row">
+                            <div class="col">
+                                <p>The Snow Queen: Mirrorlands</p>
+                                <a href="#" data-toggle="modal" data-target="#mirrorModal">
+                                    <img class="poster1" src="img/film1.jpg">
+                                </a>
+
+                                <div class="modal fade" id="mirrorModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="mirrorModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <p>Midway</p>
+                                <a href="#" data-toggle="modal" data-target="#midwayModal">
+                                    <img class="poster1" src="img/film2.jpg">
+                                </a>
+
+                                <div class="modal fade" id="midwayModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="midwayModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <p>Crazy Rich Asians</p>
+                                <a href="#" data-toggle="modal" data-target="#crazyModal">
+                                    <img class="poster1" src="img/film3.jpg">
+                                </a>
+
+                                <div class="modal fade" id="crazyModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="crazyModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <p>Avengers : Endgame</p>
+                                <a href="#" data-toggle="modal" data-target="#endModal">
+                                    <img class="poster1" src="img/film4.jpg">
+                                </a>
+
+                                <div class="modal fade" id="endModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="endModalLabel">US</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <h1 class="display-4">Info</h1>
+                                                <div class="container">
+                                                    <dl class="row">
+                                                        <dt class="col-sm-3">Release Date</dt>
+                                                        <dd class="col-sm-9">September 20, 2019</dd>
+
+                                                        <dt class="col-sm-3">Language</dt>
+                                                        <dd class="col-sm-9">English</dd>
+
+                                                        <dt class="col-sm-3">Genre</dt>
+                                                        <dd class="col-sm-9">Horror</dd>
+
+                                                        <dt class="col-sm-3">Cast & Crew</dt>
+                                                        <dd class="col-sm-9">Lupita Nyong'o,Winston Duke,Elisabeth
+                                                            Moss,Tim
+                                                            Heidecker</dd>
+
+                                                        <dt class="col sm-3">Director</dt>
+                                                        <dd class="col-sm-9">Jordan Peele</dd>
+
+                                                        <dt class="col-sm-3">Length</dt>
+                                                        <dd class="col-sm-9">116 minutes</dd>
+                                                    </dl>
+                                                </div>
+
+                                                <div class="container">
+                                                    <h1 class="display-4">Synopsis</h1>
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">Bahasa Indonesia</p>
+                                                        Bersama suaminya, Adrian, Uwa-nya dan ketiga
+                                                        anaknya, Sophie kembali ke rumah masa kecilnya. Sebuah rumah
+                                                        yang
+                                                        tidak pernah dikunjunginya lagi sejak kedua orang tuanya
+                                                        menghilang
+                                                        tanpa jejak. Dan ketika Nina, anak tertuanya, ternyata juga
+                                                        menghilang
+                                                        selagi mereka disana, Sophie dan Adrian harus mencari tahu apa
+                                                        yang
+                                                        sebenarnya terjadi di rumah itu dan mencegah tragedi terjadi
+                                                        kembali
+                                                        untuk Sophie.
+                                                    </p>
+
+                                                    <p class="text-left">
+                                                        <p class="font-weight-bold">English</p>
+                                                        Together with her husband,
+                                                        Adrian, her Uwa and her three children, Sophie returned to her
+                                                        childhood
+                                                        home. A house that he had not visited since his parents
+                                                        disappeared
+                                                        without
+                                                        a trace. And when Nina, her oldest child, apparently also
+                                                        disappeared while
+                                                        they were there, Sophie and Adrian had to find out what really
+                                                        happened in
+                                                        the house and prevent the tragedy from happening again for
+                                                        Sophie.
+                                                    </p>
+                                                </div>
+                                                <div class="container">
+                                                    <button type="button" class="btn btn-primary">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                     <br>
                 </div>
