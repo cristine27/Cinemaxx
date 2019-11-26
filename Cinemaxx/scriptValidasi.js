@@ -103,7 +103,8 @@ myInput.onkeyup = function() {
   }
 
 //   validasi phone number
-  function phoneNum(inputText){
+  function phoneNum(){
+    var inputText = document.getElementById("nump").textContent;
     var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
     if(inputText.value.match(phoneno)){
