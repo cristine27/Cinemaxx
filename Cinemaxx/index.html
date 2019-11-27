@@ -172,7 +172,7 @@
                 </div>
             </div>
         </nav>
-
+        <!-- untuk iklan  -->
         <div class="modal" id="popup">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -205,23 +205,12 @@
         <div class="row">
             <!-- quick buy content -->
             <div class="card col-sm-4" style="width: 400px; height: 70%;">
-                <ul class="nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" data-toggle="tab" href="#menu1" style="color: blue;">Quick Buy</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#menu2" style="color: blue;">Check Purchase</a>
-                    </li>
-                </ul>
-                <hr>
 
                 <div class="tab-content">
                     <div id="menu1" class="tab-pane active">
                         <h4 class="text-center">Quick Tickets</h4>
                         <div class="dropdown">
                             <label>Select Movie</label>
-                            <br>
                             <div class="container">
                                 <select class="selectMenu" data-live-search="true" style="width: 50%;">
                                     <option data-tokens="Batman">Batman</option>
@@ -236,7 +225,6 @@
 
                         <div class="dropdown">
                             <label>Select City</label>
-                            <br>
                             <div class="container">
                                 <select class="selectMenu" data-live-search="true" style="width: 50%;">
                                     <option data-tokens="Bandung">Bandung</option>
@@ -251,7 +239,6 @@
 
                         <div class="dropdown">
                             <label>Select Cinema</label>
-                            <br>
                             <div class="container">
                                 <select class="selectMenu" data-live-search="true" style="width: 50%;">
                                     <option data-tokens="CihampelasWalk">Cihampelas Walk</option>
@@ -264,28 +251,28 @@
 
                         <div class="dropdown">
                             <label>Select Showtime</label>
-                            <br>
                             <div class="container">
-                                <select class="selectMenu" data-live-search="true" style="width: 50%;">
+                                <select class="selectMenu" style="width: 50%;">
                                     <option data-tokens="today">Today, October 28</option>
                                     <option data-tokens="tommorow">Tommorow, October 29</option>
                                 </select>
                             </div>
                         </div>
-                        <br>
-                        <input onclick="" type="button" class="btn btn-info" value="Buy Ticket">
-                    </div>
 
-                    <div id="menu2" class="tab-pane fade">
-                        <div class="form-group">
-                            <form name="phoneCheck" action="index.html">
-                                <label for="nump">Mobile Phone : </label>
-                                <input type="text" class="form-control nump" id="nump">
-                                <br>
-                                <input onclick="return phoneNum()" type="button" class="form-control"
-                                    id="input" value="Check" style="color: white; background: black; width: 100px;">
-                            </form>
+                        <div class="dropdown">
+                            <label>Select Number of Seats</label>
+                            <div class="container">
+                                <select class="selectMenu" style="width: 50%;">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
                         </div>
+                        <br>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ticketModal">Buy Ticket</button>
                     </div>
                 </div>
             </div>
@@ -356,7 +343,7 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                             
-                            <button type="button" class="btn-default" onclick="openContent(this,'usTicket')">Buy Ticket</button>
+                            <a role="button" class="btn-default" href="seat/seat/index.html">Buy Ticket</a>
 
                             <div class="modal fade" id="usmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
@@ -445,7 +432,7 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
 
-                            <button type="button" class="btn-default" onclick="openContent(this,'abdoTicket')">Buy Ticket</button>
+                            <a role="button" class="btn-default" href="seat/seat/index.html">Buy Ticket</a>
 
                             <div class="modal fade" id="abominablemodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
@@ -534,7 +521,7 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
 
-                            <button type="button" class="btn-default" onclick="openContent(this,'maleTicket')">Buy Ticket</button>
+                            <a role="button" class="btn-default" href="seat/seat/index.html">Buy Ticket</a>
 
                             <div class="modal fade" id="maleficentmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
@@ -624,7 +611,7 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
 
-                            <button type="button" class="btn-default" onclick="openContent(this,'alaTicket')">Buy Ticket</button>
+                            <a role="button" class="btn-default" href="seat/seat/index.html">Buy Ticket</a>
 
                             <div class="modal fade" id="aladdinmodal" tabindex="-1" role="dialog"
                                 aria-labelledby="basicModal" aria-hidden="true">
@@ -1053,7 +1040,37 @@
         <!-- End Of Home Section -->
 
         <!-- Ticket section -->
-        <div id="usTicket" class="ticket tab" style="height: 500px; display: none;">
+        <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal title" id="exampleModalLongTitle">Movie Seat Selection</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        
+                        <div id="seat-map" class="container">
+                            <div class="front">SCREEN</div>
+                        </div>
+            
+                    <div class="booking details container"><br>
+                        <p>Tickets : <span id="counter">0</span></p>
+                        <p>Total : <b>$<span id="total"></span></b></p>
+                    </div>
+                    <div id="legend"></div>
+                    <div style="clear:booth"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="btnShow"class="btn btn-primary" data-dismiss="modal">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="usTicket" class="ticket tab" style="height: 500px; display: none;">
                 <div id="seat-map" class="container">
                         <div class="front">SCREEN</div>
                 </div>
@@ -1080,122 +1097,7 @@
 
             <div style="clear:booth"></div>
         </div>
-
-        <div id="abdoTicket" class="ticket tab" style="height: 500px; display: none;">
-                <div id="seat-map" class="container">
-                        <div class="front">SCREEN</div>
-                </div>
-        
-                <div class="booking details container"><br>
-                    <p>Movie : <span>Us</span></p>
-                    <select class="browser-default custom-select" style="width: 15%;">
-                        <option selected>Select time</option>
-                        <option value="1">14.00</option>
-                        <option value="2">16.00</option>
-                        <option value="3">18.00</option>
-                        <option value="4">20.00</option>
-                    </select>
-                    <p>Seat : </p><br>
-                    <ul id="selected-seats"></ul>
-                    <p>Tickets : <span id="counter">0</span></p>
-                    <p>Total : <b>$<span id="total"></span></b></p>
-
-                    <button class="checkout-button">BUY</button>
-                
-
-                <div id="legend"></div>
-                </div>
-
-            <div style="clear:booth"></div>
-        </div>
-
-        <div id="maleTicket" class="ticket tab" style="height: 500px; display: none;">
-                <div id="seat-map" class="container">
-                        <div class="front">SCREEN</div>
-                </div>
-        
-                <div class="booking details container"><br>
-                    <p>Movie : <span>Us</span></p>
-                    <select class="browser-default custom-select" style="width: 15%;">
-                        <option selected>Select time</option>
-                        <option value="1">14.00</option>
-                        <option value="2">16.00</option>
-                        <option value="3">18.00</option>
-                        <option value="4">20.00</option>
-                    </select>
-                    <p>Seat : </p><br>
-                    <ul id="selected-seats"></ul>
-                    <p>Tickets : <span id="counter">0</span></p>
-                    <p>Total : <b>$<span id="total"></span></b></p>
-
-                    <button class="checkout-button">BUY</button>
-                
-
-                <div id="legend"></div>
-                </div>
-
-            <div style="clear:booth"></div>
-        </div>
-
-        <div id="alaTicket" class="ticket tab" style="height: 500px; display: none;">
-                <div id="seat-map" class="container">
-                        <div class="front">SCREEN</div>
-                </div>
-        
-                <div class="booking details container"><br>
-                    <p>Movie : <span>Us</span></p>
-                    <select class="browser-default custom-select" style="width: 15%;">
-                        <option selected>Select time</option>
-                        <option value="1">14.00</option>
-                        <option value="2">16.00</option>
-                        <option value="3">18.00</option>
-                        <option value="4">20.00</option>
-                    </select>
-                    <p>Seat : </p><br>
-                    <ul id="selected-seats"></ul>
-                    <p>Tickets : <span id="counter">0</span></p>
-                    <p>Total : <b>$<span id="total"></span></b></p>
-
-                    <button class="checkout-button">BUY</button>
-                
-
-                <div id="legend"></div>
-                </div>
-
-            <div style="clear:booth"></div>
-        </div>
-
-        <div id="usTicket" class="ticket tab" style="height: 500px; display: none;">
-                <div id="seat-map" class="container">
-                        <div class="front">SCREEN</div>
-                </div>
-        
-                <div class="booking details container"><br>
-                    <p>Movie : <span>Us</span></p>
-                    <select class="browser-default custom-select" style="width: 15%;">
-                        <option selected>Select time</option>
-                        <option value="1">14.00</option>
-                        <option value="2">16.00</option>
-                        <option value="3">18.00</option>
-                        <option value="4">20.00</option>
-                    </select>
-                    <p>Seat : </p><br>
-                    <ul id="selected-seats"></ul>
-                    <p>Tickets : <span id="counter">0</span></p>
-                    <p>Total : <b>$<span id="total"></span></b></p>
-
-                    <button class="checkout-button">BUY</button>
-                
-
-                <div id="legend"></div>
-                </div>
-
-            <div style="clear:booth"></div>
-        </div>
-
-
-
-        <!-- end of ticket section -->
+        end of ticket section -->
 
         <!-- movie section -->
         <div id="kumpulan" class="movies tabs w3-container" style="display: none;">
@@ -2302,6 +2204,80 @@
 
             return total;
         }
+        // function onLoaderFunc() {
+        //     $(".seatStructure *").prop("disabled", true);
+        //     $(".displayerBoxes *").prop("disabled", true);
+        // }
+
+        // function takeData() {
+        //     if (($("#Username").val().length == 0) || ($("#Numseats").val().length == 0)) {
+        //         alert("Please Enter your Name and Number of Seats");
+        //     } else {
+        //         $(".inputForm *").prop("disabled", true);
+        //         $(".seatStructure *").prop("disabled", false);
+        //         document.getElementById("notification").innerHTML =
+        //             "<b style='margin-bottom:0px;background:#ff9800;letter-spacing:1px;'>Please Select your Seats NOW!</b>";
+        //     }
+        // }
+
+
+        // function updateTextArea() {
+
+        //     if ($("input:checked").length == ($("#Numseats").val())) {
+        //         $(".seatStructure *").prop("disabled", true);
+
+        //         var allNameVals = [];
+        //         var allNumberVals = [];
+        //         var allSeatsVals = [];
+
+        //         //Storing in Array
+        //         allNameVals.push($("#Username").val());
+        //         allNumberVals.push($("#Numseats").val());
+        //         $('#seatsBlock :checked').each(function () {
+        //             allSeatsVals.push($(this).val());
+        //         });
+
+        //         //Displaying 
+        //         $('#nameDisplay').val(allNameVals);
+        //         $('#NumberDisplay').val(allNumberVals);
+        //         $('#seatsDisplay').val(allSeatsVals);
+        //     } else {
+        //         alert("Please select " + ($("#Numseats").val()) + " seats")
+        //     }
+        // }
+
+
+        // function myFunction() {
+        //     alert($("input:checked").length);
+        // }
+
+        // /*
+        // function getCookie(cname) {
+        //     var name = cname + "=";
+        //     var ca = document.cookie.split(';');
+        //     for(var i = 0; i < ca.length; i++) {
+        //         var c = ca[i];
+        //         while (c.charAt(0) == ' ') {
+        //             c = c.substring(1);
+        //         }
+        //         if (c.indexOf(name) == 0) {
+        //             return c.substring(name.length, c.length);
+        //         }
+        //     }
+        //     return "";
+        // }
+        // */
+
+
+        // $(":checkbox").click(function () {
+        //     if ($("input:checked").length == ($("#Numseats").val())) {
+        //         $(":checkbox").prop('disabled', true);
+        //         $(':checked').prop('disabled', false);
+        //     } else {
+        //         $(":checkbox").prop('disabled', false);
+        //     }
+        // });
+
     </script>
 
     <script type="text/javascript" src="script.js"></script>

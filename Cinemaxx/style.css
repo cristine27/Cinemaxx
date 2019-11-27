@@ -25,6 +25,10 @@ i   {
     width: 70%;
 }
 
+#Checkphone{
+  display:none;
+}
+
 h5{
     font-weight: 500;
     font-family: inherit;
